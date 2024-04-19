@@ -8,7 +8,7 @@ spec:
   type: LoadBalancer
   ports:
     - protocol: TCP
-      port: 8000
+      port: 443
       targetPort: 8000
 ---
 apiVersion: apps/v1
@@ -27,7 +27,12 @@ spec:
     spec:
       containers:
         - name: api-gateway
-          image: tkdlqh2/residents-meeting-api-gateway:latest
+          image: tkdlqh2/residents-meeting-api-gateway:2
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: 'prod'
+            - name: token.secret
+              valueFrom:
+                secretKeyRef:
+                  name: secret
+                  key: token_secret

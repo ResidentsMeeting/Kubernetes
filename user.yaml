@@ -27,7 +27,12 @@ spec:
     spec:
       containers:
         - name: user
-          image: tkdlqh2/residents-meeting-user:latest
+          image: tkdlqh2/residents-meeting-user:3
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: 'prod'
+            - name: token.secret
+              valueFrom:
+                secretKeyRef:
+                  name: secret
+                  key: token_secret

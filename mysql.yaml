@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: mysql
-          image: tkdlqh2/residents-meeting-my-sql:latest
+          image: tkdlqh2/residents-meeting-my-sql:2
 #      volumes:
 #        - name: efs-vol
 #          persistentVolumeClaim:

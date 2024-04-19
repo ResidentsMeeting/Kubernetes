@@ -62,10 +62,3 @@ spec:
               value: "1"
             - name: KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS
               value: "0"
-#          volumeMounts:
-#            - name: efs-vol
-#              mountPath: /app/users
-#      volumes:
-#        - name: efs-vol
-#          persistentVolumeClaim:
-#            claimName: efs-pvc

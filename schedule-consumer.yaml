@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: schedule-consumer
-          image: tkdlqh2/residents-meeting-schedule-consumer:latest
+          image: tkdlqh2/residents-meeting-schedule-consumer:2
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: 'prod'

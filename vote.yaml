@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: vote
-          image: tkdlqh2/residents-meeting-vote:latest
+          image: tkdlqh2/residents-meeting-vote:3
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: 'prod'
